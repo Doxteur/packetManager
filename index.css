@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: #1F1F1F;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#container div {
+    margin: 35px;
+    width: 250px;
+    height: 300px;
+    background-color: grey;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container img {
+    width: 100px;
+    margin-top: 15px;
+}
+
+#container p {
+    margin-top: 35px;
+}
