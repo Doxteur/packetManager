@@ -12,7 +12,7 @@
 
     <?php
     try {
-        $bdd = new PDO('mysql:host=localhost;dbname=packetmanager;charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=eu-cdbr-west-03.cleardb.net;dbname=heroku_b962d9c0b40ed7b;charset=utf8', 'be8f7e9f42c00f', 'cf163a32');
     } catch (Exception $e) {
         die('Erreur : ' . $e->getMessage());
     }
@@ -21,13 +21,12 @@
     ?>
 
     <div id="container">
-        <a href=""></a>
         <?php 
 
         $reponse = $bdd->query('SELECT * FROM packetmanager');
         
             while($data = $reponse->fetch()) {
-                echo '<div>'.$data['id'];
+                echo '<div class =' .$data['id'] . '>';
                 echo '<a href= '. $data['link'] . '>';
                 echo '<h1>'.$data['name'].'</h1>';
                 echo '<img src=' . $data['image'] . '>';
@@ -50,15 +49,7 @@
                 <img src="Images/google.png" alt="chrome" class="image">
             </a>
         </div> -->
-        <div class="class">
-            <h1>Brave</h1>
-        </div>
-        <div class="class">
-            <h1>Facebook</h1>
-        </div>
-        <div class="class">
-            <h1>Origin</h1>
-        </div>
+     
 
     </div>
 
