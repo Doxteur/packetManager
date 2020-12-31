@@ -43,12 +43,12 @@
             $alma = $_POST["search"];
         }
         if($alma == null){
-            $reponse = $bdd->query("SELECT * FROM packetmanager");
+            $reponse = $bdd->query("SELECT * FROM packetmanager LIMIT 8");
 
         }
         if($alma != null ){
             $alma = "%".$alma."%";
-            $reponse = $bdd->query("SELECT * FROM packetmanager WHERE name LIKE '$alma' ");
+            $reponse = $bdd->query("SELECT * FROM packetmanager WHERE name LIKE '$alma' LIMIT 8");
         }
     
         while ($data = $reponse->fetch()) {
